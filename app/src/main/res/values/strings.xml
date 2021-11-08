@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PermissionTask</string>
+    <string name="camera_permission">Camera permission</string>
+    <string name="sms_permission">Send SMS permission</string>
+    <string name="contacts_permission">Read contacts permission</string>
+    <string name="storage_permission">Read storage permission</string>
+    <string name="call_permission">Call permission</string>
+    <string name="deny_text">Permission is denied, you can active it in Settings!</string>
+    <string name="ok">OK</string>
+    <string name="granted">Permission has already been granted!</string>
+    <string name="camera_granted">Camera permission is granted!</string>
+    <string name="call_granted">Call permission is granted!</string>
+    <string name="contacts_granted">Contacts permission is granted!</string>
+    <string name="sms_granted">SMS permission is granted!</string>
+    <string name="storage_granted">Storage permission is granted!</string>
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/callPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/switch_end_margin"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintTop_toTopOf="@id/callText"
+        app:layout_constraintBottom_toBottomOf="@id/callText"
+        app:layout_constraintStart_toEndOf="@id/callText"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/readContactsPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/switch_end_margin"
+        android:enabled="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@id/contactsText"
+        app:layout_constraintBottom_toBottomOf="@id/contactsText"
+        app:layout_constraintStart_toEndOf="@+id/contactsText"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/storagePermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/switch_end_margin"
+        android:enabled="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintTop_toTopOf="@id/storageText"
+        app:layout_constraintBottom_toBottomOf="@id/storageText"
+        app:layout_constraintStart_toEndOf="@id/storageText"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <TextView
+        android:id="@+id/cameraText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:layout_marginEnd="@dimen/text_end_margin"
+        android:text="@string/camera_permission"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/cameraPermission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/call_permission"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:layout_marginStart="@dimen/text_start_margin"
+        android:layout_marginEnd="@dimen/text_end_margin"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cameraText"
+        app:layout_constraintEnd_toStartOf="@id/callPermission"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+    <TextView
+        android:id="@+id/contactsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_start_margin"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:layout_marginEnd="@dimen/text_end_margin"
+        android:enabled="true"
+        android:text="@string/contacts_permission"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/readContactsPermission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/callText" />
+
+    <TextView
+        android:id="@+id/storageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_start_margin"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:layout_marginEnd="@dimen/text_end_margin"
+        android:text="@string/storage_permission"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/storagePermission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactsText" />
+
+    <TextView
+        android:id="@+id/smsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_start_margin"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:text="@string/sms_permission"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:layout_marginEnd="@dimen/text_end_margin"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendSmsPermission"
+        app:layout_constraintTop_toBottomOf="@+id/storageText" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/cameraPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:enabled="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintStart_toEndOf="@id/cameraText"
+        app:layout_constraintTop_toTopOf="@id/cameraText"
+        app:layout_constraintBottom_toBottomOf="@id/cameraText"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sendSmsPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/switch_end_margin"
+        android:enabled="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/smsText"
+        app:layout_constraintStart_toEndOf="@+id/smsText"
+        app:layout_constraintTop_toTopOf="@+id/smsText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
